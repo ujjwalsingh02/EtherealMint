@@ -1,0 +1,2 @@
+erc20Generator deployed to:  0x3511f07eD07270fF95A451afa613FF5Caca9083c
+LookUpContract deployed to:  0xBd770416a3345F91E4B34576cb804a576fa48EB1
