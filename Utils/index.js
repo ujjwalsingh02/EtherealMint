@@ -8,10 +8,48 @@ import {
   ERC20Generator_ABI,
 } from "../Context/constants";
 
+const networks = {
+  polygon_amoy: {
+  chainId: `0x${Number(80002).toString(16)}`,
+  chainName: "Polygon Amoy",
+  nativeCurrency: {
+    name: "MATIC",
+    symbol: "MATIC",
+    decimals: 18,
+  },
+  rpcUrls: ["https://rpc-amoy.polygon.technology/"],
+  blockExplorerUrls: ["https://amoy.polygonscan.com/"],
+  },
+}
+
+const changeNetwork = async ({ networkName }) => {
+  try {
+    if (!window.ethereum) throw new Error("No crypto wallet found");
+    await window.ethereum.request ({
+      method: "wallet_addEthereumChain" ,
+      params:[
+        {
+          ...networks[networkName],
+        },
+      ],
+    });
+  } 
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+const handleNetworkSwitch = async () => {
+  const networkName = "polygon_amoy";
+  await changeNetwork({ networkName });
+}
+
 export const ChechIfWalletConnected = async () => {
   try {
-    if (!window.ethereum) return console.log("Install MateMask");
+    if (!window.ethereum) return console.log("Install MetaMask");
 
+    const network = await handleNetworkSwitch();
+    console.log(network);
     const accounts = await window.ethereum.request({
       method: "eth_accounts",
     });
