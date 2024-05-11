@@ -1,22 +1,42 @@
-# IMPORTANT GUIDE
+# EtherealMint
 
-Deployed Ujjwalsingh Rajput token addresses-
+## Introduction
 
-erc20Generator deployed to:  0x3511f07eD07270fF95A451afa613FF5Caca9083c
-LookUpContract deployed to:  0xBd770416a3345F91E4B34576cb804a576fa48EB1
+This README file provides instructions on how to run the project locally.
 
-New deployed addresses - 
-erc20Generator deployed to:  0x8516A5DD3A761566542461a39aA54CEBbaCBEb77
-LookUpContract deployed to:  0x7DeA761E11f1CCecE3C270626aFc21471e3d40c7
+## Prerequisites
 
-wallet address - 
-my - 0x050a65e8e926e9427a799D336350F28D25662100
-dh - 0xb309098bcB51E5C687a16FA41bD6055f47c9eBb0
-changes - 
+Before running the project, ensure you have the following installed on your machine:
 
-1. ./context/index.js - line 67 - changed to my wallet address
-2. ./context/constants.js - chnaged the deployed contract
-3. ./contracts/LookupContract.sol - line 25 - changed to my wallet address
-4. ./scripts/deploy.js - line 9,10 - chnaged to my name
-5. ./hardhat.config.js - added my private key 
-6. ./Components/Profile/ProfileMain.jsx - line 48 - changed to my wallet address
+- Node.js and npm (Node Package Manager)
+- Git (optional, for cloning the project repository)
+- Metamask installed in your computer
+
+## Getting Started
+
+1. Clone the project repository to your local machine (if you haven't already done so):
+
+   ```bash
+   git clone https://github.com/ujjwalsingh02/EtherealMint.git
+
+2. Navigate to the project directory:
+
+   cd EtherealMint
+
+3. Install project dependencies using npm:
+
+   npm install
+
+   This command installs all the required packages and dependencies specified in the package.json file. It ensures that your project has all the necessary tools and libraries to run successfully.
+
+Running the Project
+Once you have installed the dependencies, you can run the project using the following command:
+
+npm run dev
+
+
+This command starts the development server and launches the project on your local machine. It typically opens a browser window with the project running at http://localhost:3000 (or a different port if specified).
+
+Additional Note:
+
+Make sure to have a stable internet connection during the installation process to download all required packages efficiently.
